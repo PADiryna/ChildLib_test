@@ -1,0 +1,123 @@
+
+ @charset "UTF-8";
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+ 
+ body {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   line-height: 1.42em;
+   color:wheat;
+   background-color:gray;
+ }
+ 
+ h1 {
+   font-size:3em; 
+   font-weight: 300;
+   line-height:0.5em;
+   text-align: center;
+   color: salmon;
+ }
+ 
+ h2 {
+   font-size:1em; 
+   font-weight: 300;
+   text-align: center;
+   display: block;
+   line-height:1em;
+   padding-bottom: 2em;
+   color: salmon;
+ }
+ 
+ h2 a {
+   font-weight: 700;
+   text-transform: uppercase;
+   color: salmon;
+   text-decoration: none;
+ }
+ 
+ .blue { color: green; }
+ .yellow { color: yellow; }
+ 
+ .container th h1 {
+       font-weight: bold;
+       font-size: 1em;
+   text-align: left;
+   color: salmon;
+ }
+ 
+ .container td {
+       font-weight: normal;
+       font-size: 1em;
+   -webkit-box-shadow: 0 2px 2px -2px black;
+        -moz-box-shadow: 0 2px 2px -2px black;
+             box-shadow: 0 2px 2px -2px black;
+ }
+ 
+ .container {
+       text-align: left;
+       overflow: hidden;
+       width: 100%;
+     line-height:0.25em;
+       margin: 0 auto;
+   display: table;
+   padding: 0 0 8em 0;
+ }
+ 
+ .container td, .container th {
+       padding-bottom: 2%;
+       padding-top: 2%;
+   padding-left:2%;  
+ }
+ 
+ .container tr:nth-child(odd) {
+       background-color: gray;
+ }
+ 
+ .container tr:nth-child(even) {
+       background-color: green;
+ }
+ 
+ .container th {
+       background-color: green;
+ }
+ 
+ .container td:first-child { color: salmon; }
+ 
+ .container tr:hover {
+    background-color: gray;
+ -webkit-box-shadow: 0 6px 6px -6px black;
+        -moz-box-shadow: 0 6px 6px -6px black;
+             box-shadow: 0 6px 6px -6px black;
+ }
+ 
+ .container td:hover {
+   background-color: yellow;
+   color: green;
+   font-weight: bold;
+   
+   box-shadow: goldenrod -1px 1px, goldenrod -2px 2px, goldenrod -3px 3px, goldenrod -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+   transform: translate3d(6px, -6px, 0);
+   
+   transition-delay: 0s;
+       transition-duration: 0.4s;
+       transition-property: all;
+   transition-timing-function: line;
+ }
+ 
+ @media (max-width: 800px) {
+ .container td:nth-child(4),
+ .container th:nth-child(4) { display: none; }
+ }
+ 
+ .buttons {
+   height: 1.5em;
+ }
+ 
+ .button_save {
+   height: 2em;
+ }
+ 
+ .label_book {
+   color: wheat;
+   padding: 0.25%;
+ }

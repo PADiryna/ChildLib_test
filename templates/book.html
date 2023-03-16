@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <h4>ChildLibrary</h4>
+</div>
+<div class="input_book">
+    <form method="POST" action="/add_book">
+        <button class="buttons" type="submit">Add book</button>
+    </form>
+</div>
+<table class="container">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>            
+            <td><a class="nav-link" method="POST" href="/book_info/{{ item[0] }}">{{ item[1] }}</a></td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+            <td>
+                <form method="POST" action="/delete_book/{{ item[0] }}">
+                    <button class="buttons" type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

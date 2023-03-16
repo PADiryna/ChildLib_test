@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h2>{{ title[1] }}</h2>
+    <h3>{{ title[2] }}</h3>
+    <h4>{{ title[3] }}</h4>
+    <div class="description__text">{{ title[5] }}</div>
+
+    <form method="POST" action="/changestatebook/{{ title[0] }}">
+        <button class="buttons" type="submit">{{ name_button }}</button>
+    </form>
+</div>
+{% endblock %}

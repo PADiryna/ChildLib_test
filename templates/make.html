@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container">
+        <form method="post" action="/add_book" enctype=multipart/form-data>
+
+            <h4>Add a new book to ChildLibrary</h4>
+            <label class="label_book" for="title">Title: </label>
+            <div class="input_book">
+                <input type="text" id="title" name="title"><br>
+            </div>
+            <label class="label_book" for="author">Author: </label>
+            <div class="input_book">
+                <input type="text" id="author" name="author"><br>
+            </div>
+            <label class="label_book" for="genre">Genre: </label>
+            <div class="input_book">
+                <input type="text" id="genre" name="genre"><br>
+            </div>
+            <label class="label_book" for="description">Description</label>
+            <div class="input_book">
+                <textarea class="inputarea_book" cols=80 rows=8 type="textbox" id="description" 
+                    name="description" placeholder="Description..."></textarea><br>
+            </div>
+            <div class="input_book">
+                <label class="label_book" for="img">Cover:</label>
+                <input type="file" name="cover">
+            </div>
+
+            <div class="input_book">
+                <button class="button_save" type="submit" value="save">Save</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
